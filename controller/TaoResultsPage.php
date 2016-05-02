@@ -19,7 +19,7 @@
  * 
  */
 
-namespace oat\taoResultsPage\controller;
+namespace Zeldroxe\taoResultsPage\controller;
 
 /**
  * Sample controller

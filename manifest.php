@@ -15,31 +15,28 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  * 
  * Copyright (c) 2016 (original work) Franc Romain;
- *               
+ *               2016 (update and modification)  Open Assessment Technologies SA;               
  * 
  */               
 
 return array(
     'name' => 'taoResultsPage',
-	'label' => 'taoResultsPage',
-	'description' => '',
+	'label' => 'Results Page',
+	'description' => 'An alternate resulst visualisation',
     'license' => 'GPL-2.0',
     'version' => '1.0',
 	'author' => 'Franc Romain',
-	'dependencies' => array('tao'),
+	'requires' => array(
+        'taoOutcomeUi' => '>=2.7.4'
+    ),
 	'managementRole' => 'http://www.tao.lu/Ontologies/generis.rdf#taoResultsPageManager',
     'acl' => array(
         array('grant', 'http://www.tao.lu/Ontologies/generis.rdf#taoResultsPageManager', array('ext'=>'taoResultsPage')),
     ),
     'uninstall' => array(
     ),
-    'autoload' => array (
-        'psr-4' => array(
-            'oat\\taoResultsPage\\' => dirname(__FILE__).DIRECTORY_SEPARATOR
-        )
-    ),
     'routes' => array(
-        '/taoResultsPage' => 'oat\\taoResultsPage\\controller'
+        '/taoResultsPage' => 'Zeldroxe\\taoResultsPage\\controller'
     ),    
 	'constants' => array(
 	    # views directory
