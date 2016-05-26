@@ -1,0 +1,160 @@
+
+.content-block {
+	padding: 0 !important;
+}
+
+/*
+ *  Barre lattérale gauche
+ */
+.taoResultsPage_sidebar {
+	background: #f2f0ee;
+	padding-right: 10px;
+	box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.3);
+	width: 280px;
+	position: relative;
+	z-index: 1;
+}
+.taoResultsPage_sidebar .menu {
+	padding:0 0 20px 0;
+	border-radius:5px;
+	border:solid #aaa 1px;
+	margin:10px 0 10px 10px;
+	list-style-type: none;
+	
+}
+.taoResultsPage_sidebar .menu li {
+	padding: 0.5rem 10px !important;
+	font-size: 1.5rem;
+	
+}
+.taoResultsPage_sidebar .menu li  a{
+	color: black;
+}
+.taoResultsPage_sidebar .menu .selected{
+	background-color:#D8D8D8;
+}
+
+
+/*
+ *  Contenu principal
+ */
+.taoResultsPage_content {
+	background: white;
+	width: calc(100% - 280px);
+	padding: 20px;
+	min-height: calc(100vh - 134px);
+}
+
+/*
+ *  Item résultat (barre avec le nom du stagiaire et le score)
+ */
+.taoResultsPage_collapsibleContainer {
+	padding: 10px;
+	border-radius: 2px;
+	background: #f2f0ee;
+	margin-bottom: 10px;
+	box-shadow: 2px 2px 7px 1px rgba(0,0,0,0.2);
+	clear: both;
+	cursor:pointer;
+	display:flex;
+}
+.taoResultsPage_collapsibleContainer_header {
+	padding: 0 20px;
+	flex-grow:2;
+}
+.taoResultsPage_collapsibleContainer_header span{
+	font-size:2.5rem;
+}
+.taoResultsPage_collapsibleContainer_content {
+	flex-grow:1;
+	text-align:center;
+}
+.taoResultsPage_collapsibleContainer_content span {
+	margin:10px;
+	font-size: 2.5rem;
+}
+.taoResultsPage_collapsibleContainer_score {
+	margin:10px;
+	font-size: 2.5rem;
+}
+.taoResultsPage_collapsibleContainer_wraper{
+	display:none;
+}
+
+
+/*
+ *  Résultats détaillés
+ */
+.taoResultsPage_results{
+	display: flex;
+	flex-wrap: wrap;
+	padding:10px;
+	background: #BBBBBB;
+	display: none;
+	
+}
+.taoResultsPage_results .part_title{
+	width:100%;
+	font-size:2rem;
+	color:white;
+}
+.taoResultsPage_results_container{
+	float: left;
+	min-width: 300px;
+	width: calc((100vw - 420px) / 3);
+	padding: 10px;
+	border-radius: 2px;
+	background: #f2f0ee;
+	margin: 10px;
+	box-shadow: 2px 2px 7px 1px rgba(0,0,0,0.2);
+	flex-grow:1;
+}
+.taoResultsPage_results_wraper {
+	margin-top:-10px; 
+	margin-bottom:30px;
+}
+.taoResultsPage_results_header h3{
+	display: inline-block;
+}
+.taoResultsPage_results_header span{
+	display: inline-block;
+	float: right;
+	margin:15px 30px 0 0;
+	font-size:1.5em;
+}
+.taoResultsPage_results_header .taoResultsPage_result {
+	text-align: right;
+	font-size: 2rem;
+}
+.taoResultsPage_results_content table{
+	width:100%;
+	border-collapse: collapse;
+	border: solid #aaa 1px;
+}
+.taoResultsPage_results_content table td{
+	border: solid #aaa 1px;
+	padding:5px;
+	width:50%;
+}
+
+/*
+ *  Animations
+ */
+.show_content{
+	display: block;
+	position: relative;
+	left: 0;
+}
+
+@keyframes slidedownshowresults {
+	from { height: 0px; }
+}
+
+.show_flex_results {
+	overflow:hidden;
+	display: flex;
+}
+
+.show_results {
+	animation: slidedownshowresults 1s alternate;
+}
