@@ -21,8 +21,10 @@
 
 namespace Zeldroxe\taoResultsPage\controller;
 
+require_once('taoResultsPage/includes/utils.php');
+
 /**
- * Sample controller
+ * TaoResults Controller
  *
  * @author Franc Romain
  * @package taoResultsPage
@@ -42,11 +44,11 @@ class TaoResultsPage extends \tao_actions_CommonModule {
      * A possible entry point to tao
      */
     public function index() {
-        echo __("Hello World");
+        $this->setView('index.tpl');
     }
-
-    public function templateExample() {
-        $this->setData('author', 'Franc Romain');
-        $this->setView('TaoResultsPage/templateExample.tpl');
-    }
+	
+	public function resume(){
+		$this->setView('resume.tpl');
+	}
+	
 }
