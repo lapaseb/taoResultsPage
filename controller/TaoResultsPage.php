@@ -44,7 +44,7 @@ class TaoResultsPage extends \tao_actions_CommonModule {
      * A possible entry point to tao
      */
     public function index() {
-        $this->setView('index.tpl');
+        $this->setView('home.tpl');
     }
 	
 	public function resume(){
